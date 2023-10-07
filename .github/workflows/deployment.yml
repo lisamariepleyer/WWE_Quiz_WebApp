@@ -7,12 +7,12 @@ on:
 jobs:
    test:
      uses: lisamariepleyer/WWE_Quiz_WebApp/.github/workflows/development.yml@main
+     with:
+      node-version: '18.x'
    
    build:
-     name: Test Application
-
+     name: Build Application
      runs-on: ubuntu-latest
-
      steps:
        - name: Checkout repository
          uses: actions/checkout@v3
