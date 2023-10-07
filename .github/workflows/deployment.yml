@@ -22,6 +22,8 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+      - name: DEBUG - List directory contents
+        run: ls -la
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v2
  
