@@ -6,7 +6,7 @@ on:
 
 jobs:
    test:
-     uses: lisamariepleyer/WWE_Quiz_WebApp/.github/workflows/development.yml
+     uses: lisamariepleyer/WWE_Quiz_WebApp/.github/workflows/development.yml@main
    
    build:
      name: Test Application
