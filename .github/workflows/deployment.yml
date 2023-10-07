@@ -7,8 +7,6 @@ on:
 jobs:
    test:
      uses: lisamariepleyer/WWE_Quiz_WebApp/.github/workflows/development.yml@main
-     with:
-      node-version: '18.x'
    
    build:
      name: Build Application
