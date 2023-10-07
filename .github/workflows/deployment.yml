@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-   test:
+   development:
      uses: lisamariepleyer/WWE_Quiz_WebApp/.github/workflows/development.yml@main
    
    build:
