@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        myaccount: resolve(__dirname, 'src/account/index.html'),
+        account: resolve(__dirname, 'src/account/index.html'),
         quiz: resolve(__dirname, 'src/quiz/index.html')
       },
     },

@@ -24,7 +24,7 @@ function init() {
                     answerButton.classList.add('incorrect-answer');
                     setTimeout(() => {
                         answerButton.classList.remove('incorrect-answer');
-                    }, 5000);
+                    }, 3000);
                 }
             };
             
