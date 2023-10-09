@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+export function insertMenuBar() {
   const menu = `
     <div>
       <a href="/">
@@ -14,4 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
   `;
   
     document.body.insertAdjacentHTML('afterbegin', menu);
-});
+}

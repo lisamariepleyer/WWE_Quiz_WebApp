@@ -1,4 +1,7 @@
 import './style.scss'
+import { insertMenuBar } from './shared/menubar';
+
+insertMenuBar();
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
