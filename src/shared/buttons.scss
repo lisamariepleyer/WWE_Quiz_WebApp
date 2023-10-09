@@ -1,0 +1,30 @@
+button {
+    background-color: #E1E1E1;
+    color: #7570b3;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+        background-color: #4F4A77;
+        color: #fff;
+    }
+}
+
+darkbutton {
+    background-color: #7570b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+        background-color: #4F4A77;
+    }
+}

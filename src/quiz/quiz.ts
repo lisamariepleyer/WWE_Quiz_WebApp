@@ -12,7 +12,7 @@ function init() {
 
         answers.forEach(answer => {
 
-            const answerButton = document.createElement('button');
+            const answerButton = document.createElement('quizbutton');
             answerButton.innerHTML = answer;
             answerButton.onclick = () => {
 
