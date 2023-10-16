@@ -1,6 +1,6 @@
 {
   "name": "wwe-quiz-webapp",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://lisamariepleyer.github.io/WWE_Quiz_WebApp",
   "type": "module",
@@ -10,9 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest --watchAll=false --verbose --coverage",
-    "vitest": "vitest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "vitest": "vitest"
   },
   "jest": {
     "transform": {
