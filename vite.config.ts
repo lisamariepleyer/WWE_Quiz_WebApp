@@ -16,4 +16,5 @@ export default defineConfig({
       },
     },
   },
+  base: '/WWE_Quiz_WebApp/'
 })
