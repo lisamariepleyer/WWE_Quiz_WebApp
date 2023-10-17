@@ -2,6 +2,9 @@ console.log("This is the quiz page.");
 
 import './styles.scss';
 import { fetchQuestion } from '../shared/fetchQuestion';
+import { insertMenuBar } from "../shared/menubar.ts";
+
+insertMenuBar();
 
 function init() {
     fetchQuestion(({ question, correctAnswer, answers }) => {
