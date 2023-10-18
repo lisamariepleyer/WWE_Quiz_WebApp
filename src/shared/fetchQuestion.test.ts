@@ -4,6 +4,7 @@ describe("Fetch Quiz tests", () => {
     test("The fetchQuestion function can fetch a question", async () => {
 
         // simulate XMLHttpRequest() function without actually making a network request
+        // eslint-disable-next-line
         (XMLHttpRequest as any) = jest.fn().mockImplementation(() => {
             return {
                 open: jest.fn(),
