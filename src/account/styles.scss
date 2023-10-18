@@ -14,3 +14,24 @@ p {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+table {
+    margin: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    border-color: red;
+}

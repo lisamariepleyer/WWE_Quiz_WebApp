@@ -6,6 +6,32 @@
     <title>Account</title>
 </head>
 <body>
+    <p>Provide your personal information to view your favourites!</p>
+
+    <form id="inputForm">
+        <div class="input-group">
+            <label for="text">Name:</label>
+            <input type="text" id="text" required>
+            <span class="error-message"></span>
+        </div>
+        <div class="input-group">
+            <label for="number">Age:</label>
+            <input type="number" id="number" required>
+            <span class="error-message"></span>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required pattern=".{6,}" title="Das Passwort muss mindestens 6 Zeichen lang sein.">
+            <span class="error-message"></span>
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <span class="error-message"></span>
+        </div>
+        <darkbutton type="submit">Submit</darkbutton>
+    </form>
+
     <script type="module" src="account.ts"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ function renderQuestion(question: string) {
     document.body.appendChild(questionElement);
 }
 
-function renderAnswerButtons(answers: string[], correctAnswer: string) {
+function renderAnswerButtons(question: string, answers: string[], correctAnswer: string) {
     const answersContainer = document.createElement('div');
     document.body.appendChild(answersContainer);
 
@@ -22,7 +22,7 @@ function renderAnswerButtons(answers: string[], correctAnswer: string) {
 
             if (answer === correctAnswer) {
                 answerButton.classList.add('correct-answer');
-                handleCorrectAnswer();
+                handleCorrectAnswer(question, correctAnswer);
             } else {
                 answerButton.classList.add('incorrect-answer');
                 setTimeout(() => {
@@ -34,14 +34,25 @@ function renderAnswerButtons(answers: string[], correctAnswer: string) {
     });
 }
 
-function handleCorrectAnswer() {
+function handleCorrectAnswer(question: string, correctAnswer: string) {
     const resolveQuestionContainer = document.createElement('div');
     document.body.appendChild(resolveQuestionContainer);
 
     const nextQuestionButton = document.createElement('button');
     nextQuestionButton.innerHTML = 'Next Question';
-    nextQuestionButton.onclick = () => { window.location.reload(); }
+    nextQuestionButton.onclick = () => { window.location.reload() }
     resolveQuestionContainer.appendChild(nextQuestionButton);
+
+    const addToFavouritesButton = document.createElement('button');
+    addToFavouritesButton.innerHTML = 'Add To Favorites';
+    addToFavouritesButton.onclick = () => { handleAddToFavorites(question, correctAnswer) }
+    resolveQuestionContainer.appendChild(addToFavouritesButton);
+}
+
+function handleAddToFavorites(question: string, correctAnswer: string) {
+    const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');
+    favourites.push({ question: question, answer: correctAnswer });
+    localStorage.setItem('favourites', JSON.stringify(favourites));
 }
 
 function init() {
@@ -49,7 +60,7 @@ function init() {
 
     fetchQuestion(({ question, correctAnswer, answers }) => {
         renderQuestion(question);
-        renderAnswerButtons(answers, correctAnswer);
+        renderAnswerButtons(question, answers, correctAnswer);
     });
 }
 
