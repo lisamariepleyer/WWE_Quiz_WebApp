@@ -29,7 +29,6 @@ function handleUserDataInput() {
       e.preventDefault();
       if (validateInputs()) {
         renderFavourites();
-      } else {
       }
     });
 
