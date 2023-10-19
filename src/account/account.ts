@@ -8,14 +8,20 @@ function renderFavourites() {
   if (existingTable.length > 0) {
     existingTable[0].remove();
   }
+
   const table = document.createElement('table');
+  table.classList.add('table', 'table-striped', 'table-bordered');
 
   favourites.forEach((fav: { question: string | null; answer: string | null }) => {
     const row = table.insertRow();
     const questionCell = row.insertCell(0);
     const answerCell = row.insertCell(1);
-    questionCell.textContent = fav.question;
-    answerCell.textContent = fav.answer;
+    if (fav.question !== null) {
+      questionCell.innerHTML = fav.question;
+    }
+    if (fav.answer !== null) {
+      answerCell.innerHTML = fav.answer;
+    }
   });
 
   document.body.appendChild(table);

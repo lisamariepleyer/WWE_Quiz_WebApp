@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Account</title>
 </head>
 <body>
@@ -10,23 +11,19 @@
 
     <form id="inputForm">
         <div class="input-group">
-            <label for="text">Name:</label>
-            <input type="text" id="text" required>
+            <input type="text" id="text" placeholder="Name" required>
             <span class="error-message"></span>
         </div>
         <div class="input-group">
-            <label for="number">Age:</label>
-            <input type="number" id="number" required>
+            <input type="number" id="number" placeholder="Age" required>
             <span class="error-message"></span>
         </div>
         <div class="input-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" required pattern=".{6,}" title="Das Passwort muss mindestens 6 Zeichen lang sein.">
+            <input type="password" id="password" placeholder="Password" required pattern=".{6,}" title="Das Passwort muss mindestens 6 Zeichen lang sein.">
             <span class="error-message"></span>
         </div>
         <div class="input-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" placeholder="E-Mail Adress" required>
             <span class="error-message"></span>
         </div>
         <darkbutton type="submit">Submit</darkbutton>
