@@ -45,7 +45,10 @@ function handleCorrectAnswer(question: string, correctAnswer: string) {
 
     const addToFavouritesButton = document.createElement('button');
     addToFavouritesButton.innerHTML = 'Add To Favorites';
-    addToFavouritesButton.onclick = () => { handleAddToFavorites(question, correctAnswer) }
+    addToFavouritesButton.onclick = () => {
+        handleAddToFavorites(question, correctAnswer);
+        window.location.reload();
+    }
     resolveQuestionContainer.appendChild(addToFavouritesButton);
 }
 

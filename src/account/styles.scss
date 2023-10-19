@@ -16,22 +16,23 @@ p {
 }
 
 table {
-    margin: 20px;
+    margin: 15px;
 }
 
 .input-group {
     margin-bottom: 20px;
+    display: block;
 }
 
 .error-message {
-    color: red;
+    color: #d95f02;
     display: none;
 }
 
 .valid {
-    border-color: green;
+    border-color: #1b9e77;
 }
 
 .invalid {
-    border-color: red;
+    border-color: #d95f02;
 }
