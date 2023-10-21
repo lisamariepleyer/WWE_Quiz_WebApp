@@ -1,0 +1,128 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Colours */
+
+$myRed: #d95f02;
+$myGreen: #1b9e77;
+$myPurple: #7570b3;
+$myDarkPurple: #4F4A77;
+$myBackgroundColour: #f4f4f4;
+$buttonGray: #E1E1E1;
+
+
+/* General */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $myBackgroundColour;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+  background-color: $white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Favourite Questions Table */
+
+table {
+  margin: 15px;
+}
+.input-group {
+  margin-bottom: 20px;
+  display: block;
+}
+.error-message {
+  color: $myRed;
+  display: none;
+}
+.valid {
+  border-color: $myGreen;
+}
+.invalid {
+  border-color: $myRed;
+}
+
+/* Buttons */
+
+button {
+  background-color: $buttonGray;
+  color: $myPurple;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $myDarkPurple;
+    color: $white;
+  }
+}
+
+darkbutton {
+  background-color: $myPurple;
+  color: $white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $myDarkPurple;
+  }
+}
+
+removebutton {
+  background-color: rgba(0,0,0,0);
+  color: $myPurple;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+quizbutton {
+  display: inline-block;
+  background-color: $myPurple;
+  color: $white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $myDarkPurple;
+  }
+
+  &.correct-answer, &.correct-answer:hover {
+    background-color: $myGreen;
+  }
+
+  &.incorrect-answer, &.incorrect-answer:hover {
+    background-color: $myRed;
+  }
+}
+.correct-answer {
+  background-color: $myGreen;
+}
+.incorrect-answer {
+  background-color: $myRed;
+  animation: fadeOut 3s forwards;
+}
+@keyframes fadeOut {
+  to {
+    background-color: $myPurple;
+  }
+}

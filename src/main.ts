@@ -1,4 +1,4 @@
-import './style.scss'
+import './shared/style.scss'
 import { insertMenuBar } from "./shared/menubar.ts";
 
 insertMenuBar();

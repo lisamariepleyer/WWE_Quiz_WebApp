@@ -1,6 +1,7 @@
-import './styles.scss';
+import '../shared/style.scss';
 import { fetchQuestion } from '../shared/fetchQuestion';
 import { insertMenuBar } from "../shared/menubar.ts";
+import { handleAddToFavorites } from "../shared/favouritesTable.ts";
 
 function renderQuestion(question: string) {
     const questionElement = document.createElement('p');
@@ -50,12 +51,6 @@ function handleCorrectAnswer(question: string, correctAnswer: string) {
         window.location.reload();
     }
     resolveQuestionContainer.appendChild(addToFavouritesButton);
-}
-
-function handleAddToFavorites(question: string, correctAnswer: string) {
-    const favourites = JSON.parse(localStorage.getItem('favourites') || '[]');
-    favourites.push({ question: question, answer: correctAnswer });
-    localStorage.setItem('favourites', JSON.stringify(favourites));
 }
 
 function init() {
