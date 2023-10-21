@@ -28,3 +28,18 @@ darkbutton {
         background-color: #4F4A77;
     }
 }
+
+removebutton {
+    background-color: rgba(0,0,0,0);
+    color: #7570b3;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(255,255,255,1);
+    }
+}

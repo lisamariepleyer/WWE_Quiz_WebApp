@@ -1,4 +1,4 @@
-import { fetchQuestion } from './fetchQuestion';
+import { fetchQuestion } from '../shared/fetchQuestion.ts';
 
 describe("Fetch Quiz tests", () => {
     test("The fetchQuestion function can fetch a question", async () => {
