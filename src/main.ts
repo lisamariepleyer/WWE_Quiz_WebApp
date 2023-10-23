@@ -1,5 +1,6 @@
 import './shared/style.scss'
 import { insertMenuBar } from "./shared/menubar.ts";
+import { insertFooter } from "./shared/footer.ts";
 
 insertMenuBar(import.meta.env.BASE_URL);
 
@@ -12,3 +13,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </a>
   </div>
 `
+
+insertFooter();

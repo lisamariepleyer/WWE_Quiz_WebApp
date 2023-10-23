@@ -2,6 +2,7 @@ import '../shared/style.scss';
 import { fetchQuestion } from '../shared/fetchQuestion';
 import { insertMenuBar } from "../shared/menubar.ts";
 import { handleAddToFavorites } from "../shared/favouritesTable.ts";
+import { insertFooter } from "../shared/footer.ts";
 
 function renderQuestion(question: string) {
     const questionElement = document.createElement('p');
@@ -60,6 +61,8 @@ function init() {
         renderQuestion(question);
         renderAnswerButtons(question, answers, correctAnswer);
     });
+
+    insertFooter();
 }
 
 init();

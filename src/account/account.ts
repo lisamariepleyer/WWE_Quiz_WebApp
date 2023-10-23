@@ -1,6 +1,7 @@
 import '../shared/style.scss';
 import { insertMenuBar } from "../shared/menubar.ts";
 import { renderFavourites } from "../shared/favouritesTable.ts";
+import { insertFooter } from "../shared/footer.ts";
 
 function handleUserDataInput() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -43,6 +44,7 @@ function validateInputs(): boolean {
 function init() {
   insertMenuBar(import.meta.env.BASE_URL);
   handleUserDataInput();
+  insertFooter();
 }
 
 init();
