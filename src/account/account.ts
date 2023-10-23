@@ -41,7 +41,7 @@ function validateInputs(): boolean {
 }
 
 function init() {
-  insertMenuBar();
+  insertMenuBar(import.meta.env.BASE_URL);
   handleUserDataInput();
 }
 

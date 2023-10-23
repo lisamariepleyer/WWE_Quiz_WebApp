@@ -1,7 +1,7 @@
 import './shared/style.scss'
 import { insertMenuBar } from "./shared/menubar.ts";
 
-insertMenuBar();
+insertMenuBar(import.meta.env.BASE_URL);
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

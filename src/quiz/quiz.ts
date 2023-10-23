@@ -54,7 +54,7 @@ function handleCorrectAnswer(question: string, correctAnswer: string) {
 }
 
 function init() {
-    insertMenuBar();
+    insertMenuBar(import.meta.env.BASE_URL);
 
     fetchQuestion(({ question, correctAnswer, answers }) => {
         renderQuestion(question);

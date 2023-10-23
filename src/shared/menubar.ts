@@ -1,6 +1,4 @@
-export function insertMenuBar() {
-  const baseUrl = import.meta.env.BASE_URL
-
+export function insertMenuBar(baseUrl: string) {
   const menu = `
     <div>
       <a href=${baseUrl}><button>Home</button></a>
