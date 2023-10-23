@@ -51,7 +51,8 @@ table {
 
 button {
   background-color: $buttonGray;
-  color: $myPurple;
+  color: $myDarkPurple;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   margin: 20px 5px;
@@ -68,6 +69,7 @@ button {
 darkbutton {
   background-color: $myPurple;
   color: $white;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   margin: 20px 5px;
@@ -82,7 +84,6 @@ darkbutton {
 
 removebutton {
   background-color: rgba(0,0,0,0);
-  color: $myPurple;
   border: none;
   padding: 10px 20px;
   margin: 20px 5px;
@@ -95,6 +96,7 @@ quizbutton {
   display: inline-block;
   background-color: $myPurple;
   color: $white;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   margin: 5px;
